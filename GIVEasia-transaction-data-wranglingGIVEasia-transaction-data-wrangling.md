@@ -4,8 +4,16 @@ GIVEasia is a crowdfunding platform for people to raise money online. It offers 
 # The Problem
 Since it was founded, thousands of transactions have been recorded in the database. When a user makes a donation on GIVEasia, a new row of the transaction record is created. Here is a sample transaction record:
 
-Column | field 
------------|-----------
+Column| Field (String) | Example 
+------|-------|--------
+Date | Timestamp of donation | 1 Jun 2017 06:33:40 +0800
+Name | User name | LukeHC or Anonymous
+E-mail | email | Test@gmail.com
+Charity |	organization who recieves the money | RED CROSS TAIWAN
+Movement | which fundraising campaign | Help Typhoon Victoms
+Amount | donation amount | SGD 20.00
+Net Amount | donation amount without paymeny processing fee	| SGD 19.60
+
 
 -difficulties on analyzing data
 

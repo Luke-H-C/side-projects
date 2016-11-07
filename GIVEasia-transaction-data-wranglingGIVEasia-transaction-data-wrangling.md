@@ -3,3 +3,7 @@ GIVEasia is a crowdfunding platform for people to raise money online. It offers 
 
 # The Problem
 Since it was founded, thousands of transactions have been recorded in the database. When a user makes a donation on GIVEasia, a new row of the transaction record is created. Here is a sample transaction record:
+
+```SQL
+SELECT * FROM table
+```

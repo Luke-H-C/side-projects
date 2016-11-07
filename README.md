@@ -1,5 +1,5 @@
-# side-projects
-Stuff I've done
+# Side Projects
+About stuff I've done.
 
 
 

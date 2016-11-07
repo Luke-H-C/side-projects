@@ -4,6 +4,23 @@ GIVEasia is a crowdfunding platform for people to raise money online. It offers 
 # The Problem
 Since it was founded, thousands of transactions have been recorded in the database. When a user makes a donation on GIVEasia, a new row of the transaction record is created. Here is a sample transaction record:
 
-```SQL
-SELECT * FROM table
-```
+Column | field 
+-----------|-----------
+
+-difficulties on analyzing data
+
+# First solution with EXCEL 
+
+-performance and maintenance issue
+
+# Searching for a better solution - SQL
+learning experience
+
+#  Correcting formats
+
+
+# Summarize data
+
+# Conclusion
+What the current state of the project and want can ben built further 
+

@@ -7,10 +7,10 @@ Since it was founded, thousands of transactions have been recorded in the databa
 Column| Field (String) | Example 
 ------|-------|--------
 Date | Timestamp of donation | 1 Jun 2017 06:33:40 +0800
-Name | User name | LukeHC or Anonymous
+Name | Username | LukeHC or Anonymous
 E-mail | email | Test@gmail.com
-Charity |	organization who recieves the money | RED CROSS TAIWAN
-Movement | which fundraising campaign | Help Typhoon Victoms
+Charity |	organization who receives the money | RED CROSS TAIWAN
+Movement | which fundraising campaign | Help Typhoon Victms
 Amount | donation amount | SGD 20.00
 Net Amount | donation amount without paymeny processing fee	| SGD 19.60
 

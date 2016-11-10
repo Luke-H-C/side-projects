@@ -79,6 +79,17 @@ A clean dataset is now created. I can move on to summarize the data.
 # Summarize data
 PLACEHOLDER; add business considerations 
 
+From the business perspective, I'd like to see things like how much a user has contributed.
+
+The list contains all the unique donors from August-2012 to June-2014
+I customized some fields in the list so we can do some segmentations accordingly.
+
+1) Full Name - users name. Please note that some users are “guest/anonymous”
+2) First Donation - the date of first donation was made on GIVEasia. Use this to identify GIVE early users
+3) Last Donation - the date of last donation was made on GIVEasia. Use this to figure out users recent activities
+4) Number of Donations - How many times the user has made a donation. Please note that “giving GIVEasia tip during checkout process” is considered as one donation. Use this to identify active users  
+5) Sum of Donation - total amount of donation of that user has made(plus tip to GIVEasia).  Use this to find ...rich users
+6) Average Donation - Sum of Donation/Number of Donations. Use this to figure out user behaviors
 
 # Conclusion
 What the current state of the project and want can be built further 

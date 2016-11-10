@@ -35,11 +35,11 @@ PLACEHOLDER : add sample Excel syntax
 
 # Searching for a better solution - SQL
 
-I took the free courses on Khan Academy - Hour of SQL - https://www.khanacademy.org/computing/hour-of-code/hour-of-sql
-
+I took the free courses on Khan Academy - [Hour of SQL](https://www.khanacademy.org/computing/hour-of-code/hour-of-sql). I also setup a local MySQL server (MySQL Workbench). This was probably the first time I was serious about learning some kind of programming language.
 
 #  Correcting formats
 
+The first agenda to me is to produce a "cleaned" version of transaction data. I create a VIEW to achieve this.
 
 # Summarize data
 

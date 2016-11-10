@@ -23,13 +23,20 @@ Things that need to be fixed:
 
 # First solution with EXCEL 
 
-Excel was the only data analysis tool I knew so it's obviously my only choice then.
-1. Manually 
+Excel was the only data analysis tool I knew so it's obviously my only choice then. I needed to perform the following steps just to get basic descriptive statistic.
 
--performance and maintenance issue
+1. Manually merge all monthly transaction files
+2. Remove redudent text
+3. Summarize data with complex array functions
+
+Performance soon became a major headache and I would literally spend the entire afternoon just to upadte the file. I tried to learn VBA to automate the process but it didn't take long for me to realize that I need a different approach.
+
+PLACEHOLDER : add sample Excel syntax
 
 # Searching for a better solution - SQL
-learning experience
+
+I took the free courses on Khan Academy - Hour of SQL - https://www.khanacademy.org/computing/hour-of-code/hour-of-sql
+
 
 #  Correcting formats
 

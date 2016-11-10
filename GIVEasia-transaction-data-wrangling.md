@@ -1,5 +1,5 @@
 # About GIVEasia
-GIVEasia is a crowdfunding platform for people to raise money online. It offers services similar to [GoFundMe](https://www.gofundme.com/). Instead of charging transaction fees, it relies on optional "tips" from users to cover operational expenses. For example, use can donate $100 to a campaign and pay an optional $10 tip to GIVEasia. 
+[GIVEasia](https://give.asia/) is a crowdfunding platform for people to raise money online. It offers services similar to [GoFundMe](https://www.gofundme.com/). Instead of charging transaction fees, it relies on optional "tips" from users to cover operational expenses. For example, use can donate $100 to a campaign and pay an optional $10 tip to GIVEasia. 
 
 
 # The Problem
@@ -35,11 +35,22 @@ PLACEHOLDER : add sample Excel syntax
 
 # Searching for a better solution - SQL
 
-I took the free courses on Khan Academy - [Hour of SQL](https://www.khanacademy.org/computing/hour-of-code/hour-of-sql). I also setup a local MySQL server (MySQL Workbench). This was probably the first time I was serious about learning some kind of programming language.
+I took the free courses on Khan Academy - [Hour of SQL](https://www.khanacademy.org/computing/hour-of-code/hour-of-sql). I also setup a local MySQL server using MySQL Workbench. This was probably the first time I was serious about learning some kind of programming language.
 
 #  Correcting formats
 
-The first agenda to me is to produce a "cleaned" version of transaction data. I create a VIEW to achieve this.
+The first agenda to me is to produce a "cleaned" version of transaction data. I import the raw data to MySQL Workbench and create a VIEW to achieve this. I also change the data type if required.
+
+```
+STR_TO_DATE(TRIM(BOTH ' ' FROM LEFT(`row_donation_data`.`Date`, 11)),
+                '%d %b %Y') AS `Donation_Date`,
+        TRIM(BOTH ' ' FROM `row_donation_data`.`Name`) AS `Donor_Name`,
+        LOWER(TRIM(BOTH ' ' FROM `row_donation_data`.`Email`)) AS `Email`,
+        TRIM(BOTH ' ' FROM `row_donation_data`.`Charity`) AS `Charity`,
+        TRIM(BOTH ' ' FROM `row_donation_data`.`Movement`) AS `Movement`,
+```
+
+
 
 # Summarize data
 

@@ -42,8 +42,11 @@ I took the free courses on Khan Academy - [Hour of SQL](https://www.khanacademy.
 The first agenda to me is to produce a "cleaned" version of transaction data. I import the raw data to MySQL Workbench and create a VIEW to achieve this. I also change the data type if required.
 
 ```
+# Only extract necessory string from timestamp and change datatype
 STR_TO_DATE(TRIM(BOTH ' ' FROM LEFT(`row_donation_data`.`Date`, 11)),
                 '%d %b %Y') AS `Donation_Date`,
+                
+#Remove remove trailing spaces from these fields                
         TRIM(BOTH ' ' FROM `row_donation_data`.`Name`) AS `Donor_Name`,
         LOWER(TRIM(BOTH ' ' FROM `row_donation_data`.`Email`)) AS `Email`,
         TRIM(BOTH ' ' FROM `row_donation_data`.`Charity`) AS `Charity`,

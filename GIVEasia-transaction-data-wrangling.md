@@ -81,7 +81,7 @@ PLACEHOLDER; add business considerations
 
 
 # Conclusion
-What the current state of the project and want can ben built further 
+What the current state of the project and want can be built further 
 
 PLACEHOLDER: MUST DO SPELLING AND GRAMMAR CHECK
 

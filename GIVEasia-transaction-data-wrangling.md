@@ -17,9 +17,9 @@ Net Amount | donation amount without payment processing fee	| SGD 19.60
 
 Things that need to be fixed:
 
-1. Some fields are messed up with some redundant text. For example "SGD" (which stands for Singapore Dollar
+1. Some fields are messed up with redundant text. For example "SGD" (which stands for Singapore Dollar)
 2. Data types
-3. Merging all monthly CSV files into a single one
+3. Special or test fundraising campaigns are also included 
 
 # First solution with EXCEL 
 

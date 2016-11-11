@@ -91,6 +91,48 @@ I customized some fields in the list so we can do some segmentations accordingly
 5) Sum of Donation - total amount of donation of that user has made(plus tip to GIVEasia).  Use this to find ...rich users
 6) Average Donation - Sum of Donation/Number of Donations. Use this to figure out user behaviors
 
+
+```
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+SELECT 
+    `T_Donation_to_Charities`.`Email`,
+    `Name`,
+    `First Donation to Charity`,
+    `Last_Charity`,
+    `Number of Donations to Charity`,
+    `SUM_Charity`,
+    `AVG_Charity`,
+    IFNULL(`Donation to GIVE`, 0) AS 'Donation to GIVE'
+FROM
+    (SELECT 
+        cleaned_data.Email,
+            Donor_Name AS 'Name',
+            MIN(Donation_Date) AS 'First Donation to Charity',
+            MAX(Donation_Date) AS 'Last_Charity',
+            COUNT(cleaned_data.Email) AS 'Number of Donations to Charity',
+            SUM(Net_Amount) AS 'SUM_Charity',
+            FORMAT(AVG(Net_Amount), 2) AS 'AVG_Charity'
+    FROM
+        cleaned_data
+    WHERE
+        cleaned_data.Email <> ' '
+            AND charity <> 'GIVEasia Website'
+            AND charity <> 'GIVE.asia'
+    GROUP BY cleaned_data.Email) AS T_Donation_to_Charities
+        LEFT JOIN
+    (SELECT 
+        cleaned_data.Email, 
+			SUM(Net_Amount) AS 'Donation to GIVE'
+    FROM
+        cleaned_data
+    WHERE
+        cleaned_data.Email <> ' '
+            AND (charity = 'GIVE.asia'
+            OR charity = 'GIVEasia Website')
+    GROUP BY cleaned_data.Email) AS T_Donation_to_GIVE ON T_Donation_to_Charities.Email = T_Donation_to_GIVE.Email
+```
+
+
 # Conclusion
 What the current state of the project and want can be built further 
 

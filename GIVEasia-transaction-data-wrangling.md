@@ -1,7 +1,5 @@
 #under construction...
 
-test edit
-
 # About GIVEasia
 [GIVEasia](https://give.asia/) is a crowdfunding platform for people to raise money online. It offers services similar to [GoFundMe](https://www.gofundme.com/). Instead of charging transaction fees, it relies on optional "tips" from users to cover operational expenses. For example, use can donate $100 to a campaign and pay an optional $10 tip to GIVEasia. 
 
@@ -33,7 +31,7 @@ Excel was the only data analysis tool I knew so it's obviously my only choice th
 2. Remove redudent text
 3. Summarize data with complex array functions
 
-Performance soon became a major headache and I would literally spend the entire afternoon just to update the file. I tried to learn VBA to automate the process but it didn't take long for me to realize that I need a different approach.
+Performance soon became a major headache and I would literally spend the entire afternoon just to update the file. I tried to learn VBA to automate the process but it didn't take long for me to realize that I needed a different approach.
 
 PLACEHOLDER : add sample Excel syntax
 
@@ -43,37 +41,40 @@ I took the free courses on Khan Academy - [Hour of SQL](https://www.khanacademy.
 
 #  Correcting formats
 
-The first agenda to me is to produce a "cleaned" version of transaction data. I import the raw data to MySQL Workbench and create a VIEW to achieve this. I also change the data type if required.
+The first agenda to me was to produce a "cleaned" version of transaction data. I imported the raw data to MySQL Workbench and created a VIEW to achieve this. I also changed the data type if required.
 
 ```
-# Only extract necessary string from timestamp and change datatype
+# Only extract necessary string from timestamp field and change the data type
 
-STR_TO_DATE(TRIM(BOTH ' ' FROM LEFT(`row_donation_data`.`Date`, 11)),
+STR_TO_DATE(TRIM(BOTH ' ' FROM LEFT(`
+
+
+`.`Date`, 11)),
                 '%d %b %Y') AS `Donation_Date`,
                 
-#Remove remove trailing spaces from these fields
+#Remove trailing spaces from these fields
 
-        TRIM(BOTH ' ' FROM `row_donation_data`.`Name`) AS `Donor_Name`,
-        LOWER(TRIM(BOTH ' ' FROM `row_donation_data`.`Email`)) AS `Email`,
-        TRIM(BOTH ' ' FROM `row_donation_data`.`Charity`) AS `Charity`,
-        TRIM(BOTH ' ' FROM `row_donation_data`.`Movement`) AS `Movement`,
+        TRIM(BOTH ' ' FROM `raw_donation_data`.`Name`) AS `Donor_Name`,
+        LOWER(TRIM(BOTH ' ' FROM `raw_donation_data`.`Email`)) AS `Email`,
+        TRIM(BOTH ' ' FROM `raw_donation_data`.`Charity`) AS `Charity`,
+        TRIM(BOTH ' ' FROM `raw_donation_data`.`Movement`) AS `Movement`,
 ```
-Here comes another tricky thing, the system generates two different versions of csv files. I wasn't aware of this until I discovered discrepancy between my analysis. I need to build a simple "if...then" rule to process the ```Net_Amount``` field.
+Here comes another tricky thing, the system generates two different versions of csv files. I wasn't aware of this until I discovered discrepancy between my analysis later on. I needed to build a "if...then" rule to process the ```Net_Amount``` field.
 
 ```
 (CASE
             WHEN
-                (LOCATE('SGD', `row_donation_data`.`Net_Amount`) = 1)
+                (LOCATE('SGD', `raw_donation_data`.`Net_Amount`) = 1)
             THEN
-                CAST(REPLACE(SUBSTR(`row_donation_data`.`Net_Amount`,
+                CAST(REPLACE(SUBSTR(`raw_donation_data`.`Net_Amount`,
                             4,
-                            (CHAR_LENGTH(`row_donation_data`.`Net_Amount`) - 4)),
+                            (CHAR_LENGTH(`raw_donation_data`.`Net_Amount`) - 4)),
                         ',',
                         '')
                     AS DECIMAL (7 , 2 ))
-            ELSE CAST(REPLACE(SUBSTR(`row_donation_data`.`Net_Amount`,
-                        2,
-                        (CHAR_LENGTH(`row_donation_data`.`Net_Amount`) - 8)),
+            ELSE CAST(REPLACE(SUBSTR(`raw_donation_data`.`Net_Amount`,
+                        2,\
+                        (CHAR_LENGTH(`raw_donation_data`.`Net_Amount`) - 8)),
                     ',',
                     '')
                 AS DECIMAL (7 , 2 ))
@@ -81,20 +82,19 @@ Here comes another tricky thing, the system generates two different versions of 
 A clean dataset is now created. I can move on to summarize the data.
 
 # Summarize data
-PLACEHOLDER; add business considerations 
 
-From the business perspective, I'd like to see things like how much a user has contributed.
+From a business perspective, I'd like to segment users based on different criteria. Here is a list of things I'd like to know from users:
 
-The list contains all the unique donors from August-2012 to June-2014
-I customized some fields in the list so we can do some segmentations accordingly.
-
-1) Full Name - users name. Please note that some users are “guest/anonymous”
-2) First Donation - the date of first donation was made on GIVEasia. Use this to identify GIVE early users
-3) Last Donation - the date of last donation was made on GIVEasia. Use this to figure out users recent activities
-4) Number of Donations - How many times the user has made a donation. Please note that “giving GIVEasia tip during checkout process” is considered as one donation. Use this to identify active users  
-5) Sum of Donation - total amount of donation of that user has made(plus tip to GIVEasia).  Use this to find ...rich users
-6) Average Donation - Sum of Donation/Number of Donations. Use this to figure out user behaviors
-
+Column Name| Defination | Remarks 
+------|-------|--------
+Email|Unique user ID
+Name|username|some users are “guest/anonymous”
+First Donation to Charity|the date of first donation was made on GIVEasia.|Use this to identify GIVE early users
+Last_Charity|the date of last donation was made on GIVEasia.|Use this to figure out users recent activities
+Number of Donations to Charity|# times the user has made a donation.| “Giving GIVEasia tip during checkout process” is considered as one donation. Use this to identify active users 
+SUM_Charity|total amount of donation of that user has made(plus tip to GIVEasia).|Use this to find high value users
+AVG_Charity|Sum of Donation/Number of Donations.
+Donation to GIVE|
 
 ```
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));

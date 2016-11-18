@@ -4,7 +4,7 @@
 This is about how I solved a data cleaning problem when I was working with GIVEasia. The solution was a short piece of SQL script to replace the work I did with Excel. The data cleaning process reduced from a few hours to a few seconds. Instead of buliding another complex Excel functions for new metrics, I can just rewrite some SQL scripts to get the job done.
 
 # About GIVEasia
-[GIVEasia](https://give.asia/) is a crowdfunding platform for people to raise money online. It offers services similar to [GoFundMe](https://www.gofundme.com/). Instead of charging transaction fees, it relies on optional "tips" from users to cover operational expenses. For example, use can donate $100 to a campaign and pay an optional $10 tip to GIVEasia. 
+[GIVEasia](https://give.asia/) is a crowdfunding platform for people to raise money online. It offers services similar to [GoFundMe](https://www.gofundme.com/). Instead of charging transaction fees, it relies on optional "tips" from users to cover operational expenses. For example, user can donate $100 to a campaign and pay an optional $10 tip to GIVEasia.
 
 
 # The Problem

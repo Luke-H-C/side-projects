@@ -148,10 +148,7 @@ At the time of writing I believe there is a better way to fliter out the data wi
 # Visualization
 
 # Conclusion
-I was able to get the cleaned data in a few seconds compared with a few hours when I was using Excel. Here are the things that can be improved:
-
-
-
+I was able to get the cleaned data in a few seconds compared with a few hours before. If I have another 10 hours on this project, I'd like to learn how to directly quiry the database instead of the current ad-hoc "download-import-quiry" process. In this way I have the opportunity to build real-time metrics as well. 
 
 
 PLACEHOLDER: MUST DO SPELLING AND GRAMMAR CHECK

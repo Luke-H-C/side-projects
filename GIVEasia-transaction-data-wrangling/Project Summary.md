@@ -82,20 +82,20 @@ Here comes another tricky thing, the system generates two different versions of 
 ```
 A clean dataset is now created. I can move on to summarize the data.
 
-# Summarize data
+# Summarizing data
 
-From a business perspective, I'd like to segment users to personalize our offerings.
+From a business perspective, I'd like to segment users to personalize our product offerings.
 
-Column Name| Defination | Remarks 
+Column Name| Definition | Remarks 
 ------|-------|--------
-Email|Unique user ID
-Name|username|some users are “guest/anonymous”
-First Donation to Charity|the date of first donation was made on GIVEasia.|find early users
-Last_Charity|the date of last donation was made on GIVEasia.|users recent activities
-Number of Donations to Charity|# times the user has made a donation.| “Giving GIVEasia tip during checkout process” is considered as one donation. Use this to identify active users 
-SUM_Charity|total amount of donation of that user has made(plus tip to GIVEasia).|High value users
-AVG_Charity|Sum of Donation/Number of Donations.|donation behavior metric
-Donation to GIVE|$ of donation to the team|our key revenue source
+Email| Unique user ID
+Name| Username | some users are “guest/anonymous”
+First Donation to Charity | the date of the first donation made on GIVEasia | To find early users
+Last_Charity | The date of the last donation made on GIVEasia | Recent user activities
+Number of Donations to Charity | # of donations made by the same user | To identify active users. “Giving GIVEasia tip during checkout process” is considered as one donation
+SUM_Charity| Total donations by a particular user (plus tip to GIVEasia) | To find high-value users
+AVG_Charity | Sum of Donation/Number of Donations | To identify behavior pattarn
+Donation to GIVE | Tips to GIVEasia team | Our key revenue source
 
 
 ```
@@ -146,7 +146,7 @@ FROM
     GROUP BY cleaned_data.Email) AS T_Donation_to_GIVE ON T_Donation_to_Charities.Email = T_Donation_to_GIVE.Email
 ```
 
-P.S I believe there is a better way to fliter out the data without having two joined tables.
+P.S I believe there is a better way to filter out the data without having two joined tables.
 
 # Visualization
 I made these charts using EXCEL (and followed the data visualization guildlines by [Stephen Few.](https://www.amazon.com/Stephen-Few/e/B001H6IQ5M)) I also randomized all actual numbers (Excel RAND function) and removed meaningful axis names. I discovered a lot of interesting patterns and also confirmed some of my previous understandings about our users.
@@ -156,6 +156,7 @@ I made these charts using EXCEL (and followed the data visualization guildlines 
 ![Average conversion rate](https://github.com/LukeHC/side-projects/blob/master/GIVEasia-transaction-data-wrangling/Average%20conversion%20rate.png)
 
 ![Average tips](https://github.com/LukeHC/side-projects/blob/master/GIVEasia-transaction-data-wrangling/Average%20tips.png)
+
 # Conclusion
 I was able to get the cleaned data in a few seconds compared with a few hours before. If I have another 10 hours on this project, I'd like to learn how to directly quiry the database instead of the current ad-hoc "download-import-quiry" process. In this way I have the opportunity to build real-time metrics as well. 
 

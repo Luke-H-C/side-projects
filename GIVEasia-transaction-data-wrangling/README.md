@@ -1,8 +1,8 @@
 # Summary
-This is about simplifying data cleaning process when I was working at GIVEasia. The original method was using a set of complex Excel functions to clean the data. I replaced the Excel solution with a new piece of SQL script I built from scratch.
+I simplified a data cleaning process when I was working at GIVEasia. The original method was using a set of complex Excel functions to clean the data. I replaced the Excel solution with a new piece of SQL script I built from scratch.
 
 # About GIVEasia
-[GIVEasia](https://give.asia/) is a crowdfunding platform for people to raise money online. It offers services similar to [GoFundMe](https://www.gofundme.com/). Instead of charging transaction fees, it relies on optional "tips" from users to cover operational expenses. For example, the user can donate $100 to a campaign and pay an optional $10 tip to GIVEasia.
+[GIVEasia](https://give.asia/) is a crowdfunding platform for people to raise money online. It offers services similar to [GoFundMe](https://www.gofundme.com/). Instead of charging transaction fees, it relies on optional "tips" from users to cover operational expenses. For example, the user can donate $100 to a fundraising campaign and pay an optional $10 tip to GIVEasia.
 
 # The Problem
 Since GIVEasia was founded, thousands of transactions have been recorded. When a user makes a donation on GIVEasia, a new row of the transaction record is created. Typically I have to manually go to the backend, hit a button to export the monthly transaction CSV file in the following format:
@@ -12,7 +12,7 @@ Column| Field (String) | Example
 Date | Timestamp of donation | 1 Jun 2017 06:33:40 +0800
 Name | Username | LukeHC or Anonymous
 E-mail | Email | Test@gmail.com
-Charity | Organization who receives the money | RED CROSS TAIWAN
+Charity | Organization that receives the money | RED CROSS TAIWAN
 Movement | Fundraising campaign | Help Typhoon Victims
 Amount | Donation amount | SGD 20.00
 Net Amount | Donation amount less payment processing fees | SGD 19.60
@@ -87,8 +87,8 @@ From a business perspective, I'd like to segment users to personalize our produc
 Column Name| Definition | Remarks 
 ------|-------|--------
 Email| Unique user ID
-Name| Username | some users are “guest/anonymous”
-First Donation to Charity | the date of the first donation made on GIVEasia | To find early users
+Name| Username | Some users are “guest/anonymous”
+First Donation to Charity | The date of the first donation made on GIVEasia | To find early users
 Last_Charity | The date of the last donation made on GIVEasia | Recent user activities
 Number of Donations to Charity | # of donations made by the same user | To identify active users. “Giving GIVEasia tip during checkout process” is considered as one donation
 SUM_Charity| Total donations by a particular user (plus tip to GIVEasia) | To find high-value users
@@ -157,4 +157,4 @@ I made these charts using EXCEL (and followed the data visualization guidelines 
 
 # Conclusion
 
-I was able to get the cleaned data in a few seconds compared with a few hours before. If I have another 10 hours on this project, I'd like to learn how to directly query the database instead of the current ad-hoc "download-import-query" process.
+I was able to get the cleaned data in a few seconds using SQL script compared with the hour-long process in Excel. If I have another 10 hours on this project, I'd like to learn how to directly query the database instead of the current ad-hoc "download-import-query" process.

@@ -1,5 +1,3 @@
-#under construction...
-
 # Summary
 This is about simplifying data cleaning process when I was working at GIVEasia. The original method was using a set of complex Excel functions to clean the data. I replaced the Excel solution with a new piece of SQL script I built from scratch.
 

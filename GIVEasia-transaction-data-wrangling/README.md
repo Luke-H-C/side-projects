@@ -149,7 +149,7 @@ FROM
 P.S I believe there is a better way to filter out the data without having two joined tables.
 
 # Visualization
-I made these charts using EXCEL (and followed the data visualization guildlines by [Stephen Few.](https://www.amazon.com/Stephen-Few/e/B001H6IQ5M)) I also randomized all actual numbers (Excel RAND function) and removed meaningful axis names. I discovered a lot of interesting patterns and also confirmed some of my previous understandings about our users.
+I made these charts using EXCEL (and followed the data visualization guidelines by [Stephen Few.](https://www.amazon.com/Stephen-Few/e/B001H6IQ5M)) I randomized all actual numbers (Excel RAND function) and removed meaningful axis names. I discovered a lot of interesting patterns and also confirmed some of my previous understandings about our users.
 
 ![Decreasing conversion rate](https://github.com/LukeHC/side-projects/blob/master/GIVEasia-transaction-data-wrangling/Decreasing%20conversion%20rate.png)
 
@@ -158,8 +158,5 @@ I made these charts using EXCEL (and followed the data visualization guildlines 
 ![Average tips](https://github.com/LukeHC/side-projects/blob/master/GIVEasia-transaction-data-wrangling/Average%20tips.png)
 
 # Conclusion
-I was able to get the cleaned data in a few seconds compared with a few hours before. If I have another 10 hours on this project, I'd like to learn how to directly quiry the database instead of the current ad-hoc "download-import-quiry" process. In this way I have the opportunity to build real-time metrics as well. 
 
-
-PLACEHOLDER: MUST DO SPELLING AND GRAMMAR CHECK
-
+I was able to get the cleaned data in a few seconds compared with a few hours before. If I have another 10 hours on this project, I'd like to learn how to directly query the database instead of the current ad-hoc "download-import-query" process.

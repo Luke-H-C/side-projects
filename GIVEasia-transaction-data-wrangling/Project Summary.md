@@ -13,31 +13,31 @@ Column| Field (String) | Example
 ------|-------|--------
 Date | Timestamp of donation | 1 Jun 2017 06:33:40 +0800
 Name | Username | LukeHC or Anonymous
-E-mail | email | Test@gmail.com
-Charity |	organization who receives the money | RED CROSS TAIWAN
-Movement | which fundraising campaign | Help Typhoon Victims
-Amount | donation amount | SGD 20.00
-Net Amount | donation amount without payment processing fee	| SGD 19.60
+E-mail | Email | Test@gmail.com
+Charity | Organization who receives the money | RED CROSS TAIWAN
+Movement | Fundraising campaign | Help Typhoon Victims
+Amount | Donation amount | SGD 20.00
+Net Amount | Donation amount less payment processing fees | SGD 19.60
 
-Things that need to be fixed:
+Things that needed to be fixed:
 
-1. Some fields are messed up with redundant text. For example "SGD" (which stands for Singapore Dollar)
+1. Some fields are messed up with redundant text. For example: "SGD" (which stands for Singapore Dollar)
 2. Data types
 3. Special or test fundraising campaigns are also included 
 
 # First solution with EXCEL 
 
-Excel was the only data analysis tool I knew so it's obviously my only choice then. I needed to perform the following steps just to get basic descriptive statistic.
+Excel was the only data analysis tool I knew so it was obviously the only choice. I had to perform the following steps just to get the basic descriptive statistics.
 
-1. Manually merge all monthly transactiontrupdateansaction files
-2. Remove redudent text
-3. Summarize data with complex array functions
+1. Manually merging all monthly transaction files
+2. Removing redundant text
+3. Summarizing data with complex array functions
 
-I needed to use nested functions like TRIM, LEFT, RIGHT, MID, FIND, Array functions and a bunch of VLOOKUP. To make things easier I created multiple sheets to clean data in different stages. Performance soon became a major headache and I would literally spend the entire afternoon just to update the file. I tried to learn VBA to automate the process but it didn't take long for me to realize that I needed a different approach.
+I built nested functions like TRIM, LEFT, RIGHT, MID, FIND, Array functions and a bunch of VLOOKUP. To make things easier I created multiple sheets to clean data in different stages. Performance soon became a major headache and I would literally spend the entire afternoon just to update the file with additional monthly data. I tried to learn Excel VBA to automate the process but it didn't take long for me to realize that I needed a different approach.
 
 # Searching for a better solution - SQL
 
-I took the free courses on Khan Academy - [Hour of SQL](https://www.khanacademy.org/computing/hour-of-code/hour-of-sql). I also setup a local MySQL server using MySQL Workbench. This was probably the first time I was serious about learning some kind of programming language.
+I took free courses on Khan Academy - [Hour of SQL](https://www.khanacademy.org/computing/hour-of-code/hour-of-sql). I also setup a local MySQL server using MySQL Workbench. This was probably the first time I was serious about learning some kind of programming language.(Well, strictly speaking, SQL is not actually a programming language)
 
 #  Correcting formats
 
@@ -59,7 +59,8 @@ STR_TO_DATE(TRIM(BOTH ' ' FROM LEFT(`
         TRIM(BOTH ' ' FROM `raw_donation_data`.`Charity`) AS `Charity`,
         TRIM(BOTH ' ' FROM `raw_donation_data`.`Movement`) AS `Movement`,
 ```
-Here comes another tricky thing, the system generates two different versions of csv files. I wasn't aware of this until I discovered discrepancy between my analysis later on. I needed to build a "if...then" rule to process the ```Net_Amount``` field.
+
+Here comes another tricky thing, the system generates two different versions of CSV files. I wasn't aware of this until I discovered the discrepancy between my analysis later on. I needed to build an "if...then" rule to process the ```Net_Amount``` field.
 
 ```
 (CASE

@@ -1,14 +1,13 @@
 #under construction...
 
 # Summary
-This is about how I solved a data cleaning problem when I was working with GIVEasia. The solution was a short piece of SQL script to replace the work I did with Excel. The data cleaning process reduced from a few hours to a few seconds. Instead of buliding another complex Excel functions for new metrics, I can just rewrite some SQL scripts to get the job done.
+This is about simplifying data cleaning process when I was working at GIVEasia. The original method was using a set of complex Excel functions to clean the data. I replaced the Excel solution with a new piece of SQL script I built from scratch.
 
 # About GIVEasia
-[GIVEasia](https://give.asia/) is a crowdfunding platform for people to raise money online. It offers services similar to [GoFundMe](https://www.gofundme.com/). Instead of charging transaction fees, it relies on optional "tips" from users to cover operational expenses. For example, user can donate $100 to a campaign and pay an optional $10 tip to GIVEasia.
-
+[GIVEasia](https://give.asia/) is a crowdfunding platform for people to raise money online. It offers services similar to [GoFundMe](https://www.gofundme.com/). Instead of charging transaction fees, it relies on optional "tips" from users to cover operational expenses. For example, the user can donate $100 to a campaign and pay an optional $10 tip to GIVEasia.
 
 # The Problem
-Since GIVEasia was founded, thousands of transactions have been recorded in the database. When a user makes a donation on GIVEasia, a new row of the transaction record is created. Typically I have to manually go to the backend, hit a button and export the monthly transaction CSV file in the following format:
+Since GIVEasia was founded, thousands of transactions have been recorded. When a user makes a donation on GIVEasia, a new row of the transaction record is created. Typically I have to manually go to the backend, hit a button to export the monthly transaction CSV file in the following format:
 
 Column| Field (String) | Example 
 ------|-------|--------

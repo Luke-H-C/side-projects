@@ -7,7 +7,7 @@ I simplified a data cleaning process when I was working at GIVEasia. The origina
 # The Problem
 Since GIVEasia was founded, thousands of transactions have been recorded. When a user makes a donation on GIVEasia, a new row of the transaction record is created. Typically I have to manually go to the backend, hit a button to export the monthly transaction CSV file in the following format:
 
-Column| Field (String) | Example 
+Column| Field (Data type: String) | Example 
 ------|-------|--------
 Date | Timestamp of donation | 1 Jun 2017 06:33:40 +0800
 Name | Username | LukeHC or Anonymous
@@ -31,7 +31,7 @@ Excel was the only data analysis tool I knew so it was obviously the only choice
 2. Removing redundant text
 3. Summarizing data with complex array functions
 
-I built nested functions like TRIM, LEFT, RIGHT, MID, FIND, Array functions and a bunch of VLOOKUP. To make things easier I created multiple sheets to clean data in different stages. Performance soon became a major headache and I would literally spend the entire afternoon just to update the file with additional monthly data. I tried to learn Excel VBA to automate the process but it didn't take long for me to realize that I needed a different approach.
+I built nested functions like TRIM, LEFT, RIGHT, MID, FIND, Array functions and a bunch of VLOOKUP. Performance soon became a major headache. I tried to learn Excel VBA to automate the process but it didn't take long for me to realize that I needed a different approach.
 
 # Searching for a better solution - SQL
 

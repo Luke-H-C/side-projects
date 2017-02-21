@@ -13,15 +13,6 @@ From data wrangling, exploration to feature engineering, the simple logistic reg
 
 ![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
 
-<html>
-<body>
-
-<img src="https://github.com/LukeHC/The-Quantitative-Decision/blob/master/Kaggle/Coefficient%20Est..png" alt="Coefficient Est." style="width:304px;height:228px;">
-
-</body>
-</html>
-
-
 # SQL
 
 # Strategic Planning

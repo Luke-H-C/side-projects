@@ -43,11 +43,13 @@ From partnership assessment, new technology evaluation to market entry strategy.
 ![](https://github.com/LukeHC/The-Quantitative-Decision/raw/master/Strategic%20Planning/2.png)
 
 # Data Visualizations
-Guess what, I rebuilt the entire data visualization guidelines when I was in the one-year compulsory alternative military service (替代役）. Here is an example:
+I'm a strong believer of [Edward Tufte's](https://en.wikipedia.org/wiki/Edward_Tufte) simple design principles.
 
+![](https://github.com/LukeHC/The-Quantitative-Decision/raw/master/GIVEasia-transaction-data-wrangling/Average%20conversion%20rate.png)
 
+Guess what, I also rebuilt the entire data visualization guidelines when I was in the one-year compulsory alternative military service (替代役）. Here is an example:
 
-
+![](https://github.com/LukeHC/The-Quantitative-Decision/raw/master/Data%20Visualization/Before_After.png)
 
 # Funnel Optimization
 

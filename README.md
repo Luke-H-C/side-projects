@@ -10,8 +10,15 @@ Someone who loves to make data-informed decisions
 From data wrangling, exploration to feature engineering, the simple logistic regression model predicts who can survive in the Titanic tragedy.
 
 ![Coefficient Est.](https://github.com/LukeHC/The-Quantitative-Decision/blob/master/Kaggle/Coefficient%20Est..png)
+<!DOCTYPE html>
+<html>
+<body>
 
 <img src="https://github.com/LukeHC/The-Quantitative-Decision/blob/master/Kaggle/Coefficient%20Est..png" alt="Coefficient Est." style="width:304px;height:228px;">
+
+</body>
+</html>
+
 
 # SQL
 

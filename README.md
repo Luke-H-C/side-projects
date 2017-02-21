@@ -13,7 +13,7 @@ From data wrangling, exploration to feature engineering, the simple logistic reg
 
 # SQL
 
-## [GIVEasia Transaction Data Wrangling](https://github.com/LukeHC/The-Quantitative-Decision/tree/master/GIVEasia-transaction-data-wrangling)
+## [GIVEasia Transaction Data Wrangling](https://github.com/LukeHC/The-Quantitative-Decision/blob/master/GIVEasia-transaction-data-wrangling/README.md)
 I wrote SQL to simply transaction data cleaning process.
 ```
     (SELECT 

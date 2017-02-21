@@ -13,6 +13,8 @@ From data wrangling, exploration to feature engineering, the simple logistic reg
 
 ![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
 
+![Decreasing conversion rate](https://github.com/LukeHC/side-projects/blob/master/GIVEasia-transaction-data-wrangling/Decreasing%20conversion%20rate.png)
+
 # SQL
 
 # Strategic Planning

@@ -52,7 +52,7 @@ Guess what, I also rebuilt the entire data visualization guidelines when I was i
 ![](https://github.com/LukeHC/The-Quantitative-Decision/raw/master/Data%20Visualization/Before_After.png)
 
 # Funnel Optimization
-I increased conversion rates by building automated workflows with Typeform, MailChimp, Zendesk, Zapier and many other tools. Different personalized messages were sent to website visitors, leads, customers, and promoters. The following flowchart is an example of how the information was passed to different tools:
+I increased conversion rates by sending personalized messages to website visitors, leads, customers, and promoters. I leveraged Typeform, MailChimp, Zendesk, Zapier and many other tools to build automated workflows. The following flowchart is an example of how the information was passed between different tools:
 
 ![](https://github.com/LukeHC/The-Quantitative-Decision/raw/master/Strategic%20Planning/Lead%20nurturing.png)
 

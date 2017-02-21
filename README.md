@@ -14,7 +14,7 @@ From data wrangling, exploration to feature engineering, the simple logistic reg
 # SQL
 
 ## [GIVEasia Transaction Data Wrangling](https://github.com/LukeHC/The-Quantitative-Decision/raw/master/GIVEasia-transaction-data-wrangling/README.md)
-I wrote SQL to simply transaction data cleaning process.
+I wrote SQL to simplify transaction data cleaning process.
 ```
     (SELECT 
         cleaned_data.Email,
@@ -84,3 +84,8 @@ Under each key sections, I tracked every action items on a massive spreadsheet, 
 I'd like to say I built everything you've seen above from scratch (including all the fancy flowcharts). And yes, it's technically correct.
 
 However, without the help of team members and guidance from external advisors, I could not have a chance to learn, build and break things. I want to say a huge Thank-you to everyone who had help me.
+
+You can reach me at 
+LukeHC.Liu@gmail.com
+or
+LukeHCLiu@163.com

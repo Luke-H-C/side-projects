@@ -77,4 +77,10 @@ We designed the entire operations flow from taking orders, sending the machine, 
 
 ![](https://github.com/LukeHC/The-Quantitative-Decision/raw/master/Strategic%20Planning/Customer%20support%20flow.png)
 
-Under each key sections, I built a massive spreadsheet to track every action items, like who needs to deliver what on which date. After months of planning and practicing, we finally personally delivered the first product to someone's house.
+Under each key sections, I tracked every action items on a massive spreadsheet, like who needs to deliver what on which date. After months of planning and practicing, we finally personally delivered the first product to someone's house.
+
+# The last thing to say...
+
+I'd like to say I built everything you've seen above from scratch (including all the fancy flowcharts). And yes, it's technically correct.
+
+However, without the help of team members and guidance from external advisors, I could not have a chance to learn, build and break things. I want to say a huge Thank-you to everyone who had help me.

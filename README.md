@@ -6,7 +6,7 @@ Someone who loves to make data-informed decisions
 
 # Machine Learning with Python
 
-## Survival Prediction
+## [Survival Prediction](https://www.kaggle.com/skywalkerhc/titanic/machine-learning-for-survival-prediction-2)
 From data wrangling, exploration to feature engineering, the simple logistic regression model predicts who can survive in the Titanic tragedy.
 
 

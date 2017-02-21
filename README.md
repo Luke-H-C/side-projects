@@ -35,6 +35,11 @@ I wrote SQL to simply transaction data cleaning process.
 
 # Strategic Planning
 
+From partnership assessment, new technology evaluation to market entry strategy.
+
+![](https://github.com/LukeHC/The-Quantitative-Decision/blob/master/Strategic%20Planning/1.png)
+![](https://github.com/LukeHC/The-Quantitative-Decision/blob/master/Strategic%20Planning/2.png)
+
 # Data Visualizations
  
 # Funnel Optimization

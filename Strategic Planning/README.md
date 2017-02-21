@@ -1,1 +1,1 @@
-Some strategic planning work I've done
+Some strategic planning I've done

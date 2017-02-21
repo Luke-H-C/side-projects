@@ -60,5 +60,16 @@ I increased conversion rates by sending personalized messages to website visitor
 
 # Operations
 
+People are afraid of hiring someone who can TALK but can NOT do stuff. I feel the same way. Two stories to share:
+
+## A
+At Zimplistic, a hardware startup at growing stage, I ran the product pilot program with a small team in 3 months. The purpose was to send functional products to some users and tested everything before mass production. This was a critical project for the company.
+
+We designed the entire operations flow from taking orders, sending the machine, customer support and feedback analysis. Here is an example:
+
+![](https://github.com/LukeHC/The-Quantitative-Decision/raw/master/Strategic%20Planning/Customer%20support%20flow.png)
+
+Under each key sections, I built a massive spreadsheet to track every action items, like who needs to deliver what on which date. After months of planning and practicing, we finally personally delivered the first product to someone's house.
+
 
 

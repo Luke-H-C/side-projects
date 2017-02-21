@@ -6,6 +6,12 @@ Someone who loves to make data-informed decisions
 
 # Machine Learning with Python
 
+## Survival Prediction
+From data wrangling, exploration to feature engineering, the simple logistic regression model predicts who can survive in the Titanic tragedy.
+
+
+
+
 # SQL
 
 # Strategic Planning

@@ -13,6 +13,26 @@ From data wrangling, exploration to feature engineering, the simple logistic reg
 
 # SQL
 
+## [GIVEasia Transaction Data Wrangling](https://github.com/LukeHC/The-Quantitative-Decision/tree/master/GIVEasia-transaction-data-wrangling)
+I wrote SQL to simply transaction data cleaning process.
+```
+    (SELECT 
+        cleaned_data.Email,
+            Donor_Name AS 'Name',
+            MIN(Donation_Date) AS 'First Donation to Charity',
+            MAX(Donation_Date) AS 'Last_Charity',
+            COUNT(cleaned_data.Email) AS 'Number of Donations to Charity',
+            SUM(Net_Amount) AS 'SUM_Charity',
+            FORMAT(AVG(Net_Amount), 2) AS 'AVG_Charity'
+    FROM
+        cleaned_data
+    WHERE
+        cleaned_data.Email <> ' '
+            AND charity <> 'GIVEasia Website'
+            AND charity <> 'GIVE.asia'
+    GROUP BY cleaned_data.Email) AS T_Donation_to_Charities
+```
+
 # Strategic Planning
 
 # Data Visualizations

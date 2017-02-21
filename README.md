@@ -4,7 +4,7 @@ Someone who loves to make data-informed decisions
 
 [LinkedIn](https://www.linkedin.com/in/lukehcliu/)
 
-# Machine Learning Practices with Python
+# Machine Learning with Python
 
 # SQL
 

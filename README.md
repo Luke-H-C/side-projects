@@ -9,7 +9,7 @@ Someone who loves to make data-informed decisions
 ## [Survival Prediction](https://www.kaggle.com/skywalkerhc/titanic/machine-learning-for-survival-prediction-2)
 From data wrangling, exploration to feature engineering, the simple logistic regression model predicts who can survive in the Titanic tragedy.
 
-![Coefficient Est.](The-Quantitative-Decision/Kaggle/Coefficient Est..png)
+![Coefficient Est.](https://github.com/LukeHC/The-Quantitative-Decision/blob/master/Kaggle/Coefficient%20Est..png)
 
 
 # SQL
